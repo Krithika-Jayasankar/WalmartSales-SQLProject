@@ -102,6 +102,15 @@ ORDER BY Profit DESC;
 
 SELECT Payment
 FROM Walmart.sales_data
-Group By Payment;
+Group By Payment
+ORDER BY Transactions DESC;
+
+-- AVG rating by product line
+
+SELECT  product_line,  ROUND(AVG(rating),2) AS AVG_rating
+FROM Walmart.sales_data
+Group By Product_line
+Order By Avg_rating DESC;
+
 
 
